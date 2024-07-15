@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.0.2
+
+### Patch Changes
+
+- Remove unnessary files in build folder
+
 ## 3.0.1
 
 ### Patch Changes

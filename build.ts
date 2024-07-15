@@ -26,3 +26,4 @@ execSync("bun run tsc --emitDeclarationOnly --outDir dist");
 execSync("mv dist/src/* dist");
 execSync("cp src/typing.d.ts dist");
 execSync("cp src/typing.d.ts dist");
+execSync("rm -rf dist/tsconfig.tsbuildinfo");
