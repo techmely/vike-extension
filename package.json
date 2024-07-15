@@ -20,7 +20,8 @@
     "test.unit.run": "NODE_ENV=test vitest run --passWithNoTests --isolate",
     "test.unit.coverage": "vitest --coverage",
     "build": "bun build ./src/index.ts --target bun --outdir dist --sourcemap=linked && bun run build:types",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist"
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "prepare": "husky"
   },
   "dependencies": {
     "@techmely/head": "^0.0.0"
@@ -45,6 +46,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitest/coverage-v8": "1.6.0",
+    "husky": "9.0.11",
     "npm-check-updates": "16.14.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -67,14 +69,30 @@
   },
   "typesVersions": {
     "*": {
-      "query/config": ["./dist/query/_config.d.ts"],
-      "useData": ["./dist/hooks/useData.d.ts"],
-      "usePageContext": ["./dist/hooks/usePageContext.d.ts"],
-      "clientOnly": ["./dist/helpers/clientOnly.d.ts"],
-      ".": ["./dist/index.d.ts"],
-      "config": ["./dist/+config.d.ts"],
-      "renderer/onRenderHtml": ["./dist/renderer/onRenderHtml.d.ts"],
-      "renderer/onRenderClient": ["./dist/renderer/onRenderClient.d.ts"]
+      "query/config": [
+        "./dist/query/_config.d.ts"
+      ],
+      "useData": [
+        "./dist/hooks/useData.d.ts"
+      ],
+      "usePageContext": [
+        "./dist/hooks/usePageContext.d.ts"
+      ],
+      "clientOnly": [
+        "./dist/helpers/clientOnly.d.ts"
+      ],
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "config": [
+        "./dist/+config.d.ts"
+      ],
+      "renderer/onRenderHtml": [
+        "./dist/renderer/onRenderHtml.d.ts"
+      ],
+      "renderer/onRenderClient": [
+        "./dist/renderer/onRenderClient.d.ts"
+      ]
     }
   },
   "publishConfig": {
@@ -92,5 +110,9 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"]
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
 }

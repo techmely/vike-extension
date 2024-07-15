@@ -1,0 +1,11 @@
+#!/bin/bash
+
+textBase='\033[0m'
+textInformation='\033[1;34m'
+textSuccess='\033[1;32m'
+
+echo "$textInformation \nStart lint code quality with biome"
+bun run lint.format
+echo "$textSuccess \nCheck rome format successfully."
+
+echo "$textBase"
