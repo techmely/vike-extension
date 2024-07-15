@@ -1,6 +1,6 @@
 import React from "react";
 import type { PageContext } from "vike/types";
-import { PageContextProvider } from "./PageContextProvider";
+import { PageContextProvider } from "../providers/PageContextProvider";
 
 export function AppPage(pageContext: PageContext) {
   const Layout = pageContext.config?.Layout || PassThrough;

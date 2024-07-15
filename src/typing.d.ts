@@ -1,6 +1,6 @@
-import type { FC, PropsWithChildren, ReactNode } from "react";
-import type { EntityId, StringEnum } from "@techmely/types";
 import type { QueryClientConfig } from "@tanstack/react-query";
+import type { EntityId, StringEnum } from "@techmely/types";
+import type { FC, PropsWithChildren, ReactNode } from "react";
 import type { PageContext } from "vike/types";
 
 type PageProps = Record<string, any>;

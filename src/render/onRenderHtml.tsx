@@ -5,7 +5,6 @@ import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync, PageContext } from "vike/types";
 import { AppPage } from "../utils/App";
 import generateAppHead from "../utils/AppHead";
-import { AppScriptBody } from "../utils/AppScriptBody";
 import { getMetaHtml } from "../utils/getMetaHtml";
 
 addEcosystemStamp();
@@ -19,7 +18,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
     <html lang="${lang}" ${metaHtml}>
       <head>${appHead}</head>
       <body>
-        <div id="root">${pageHtml}${AppScriptBody}</>
+        <div id="root">${pageHtml}</>
       </body>
     </html>`;
 

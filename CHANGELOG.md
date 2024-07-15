@@ -1,5 +1,17 @@
 # @techmely/vike-react
 
+## 3.0.1
+
+### Patch Changes
+
+- Fix publish
+
+## 3.0.0
+
+### Major Changes
+
+- Move to one repo for all vike extension
+
 ## 2.2.0
 
 ### Minor Changes

@@ -55,7 +55,7 @@ export const StreamedHydration: React.FC<PropsWithChildren<Props>> = ({ children
       hydrate(client, entry);
     };
 
-    for (const entry of window.__reactQueryDehydrated__) {
+    for (const entry of window.__reactQueryDehydrated__ as DehydratedState[]) {
       handleEntry(entry);
     }
 

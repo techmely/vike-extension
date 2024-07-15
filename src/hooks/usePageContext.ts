@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { VikePageContext } from "../utils/PageContextProvider";
+import { VikePageContext } from "../providers/PageContextProvider";
 
 export function usePageContext() {
   const pageContext = useContext(VikePageContext);
