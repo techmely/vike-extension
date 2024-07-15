@@ -4,7 +4,7 @@ import type { DocumentHtml, TemplateWrapped } from "vike/dist/esm/node/runtime/h
 import type { PageContextServer } from "vike/types";
 
 import { describe, expect, test } from "vitest";
-import onRenderHtml from "../src/onRenderHtml";
+import onRenderHtml from "../src/render/onRenderHtml";
 
 describe("On render html()", () => {
   test("Should render html with app head tag html", async () => {

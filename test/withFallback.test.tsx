@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider, useSuspenseQuery } from "@tanstack/re
 import { cleanup, render, waitFor } from "@testing-library/react";
 import React, { type ReactNode, useEffect } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { withFallback } from '../src/query/withFallback';
+import { withFallback } from "../src/components/withFallback";
 
 const Component = withFallback(
   ({ count, onMount }: { count?: number; onMount?: () => void }) => {

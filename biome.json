@@ -29,11 +29,6 @@
     "formatWithErrors": false
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      "coverage",
-      "dist",
-      ".vscode"
-    ]
+    "ignore": ["node_modules", "coverage", "dist", ".vscode"]
   }
 }
