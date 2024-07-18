@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -65,7 +65,9 @@
     "./query/config": "./query/+config.js",
     "./useData": "./hooks/useData.js",
     "./usePageContext": "./hooks/usePageContext.js",
+    "./FallbackErrorBoundary": "./components/FallbackErrorBoundary.js",
     "./clientOnly": "./helpers/clientOnly.js",
+    "./ReactQueryProvider": "./providers/ReactQueryProvider.js",
     "./render/onRenderHtml": "./render/onRenderHtml.js",
     "./render/onRenderClient": "./render/onRenderClient.js"
   },
