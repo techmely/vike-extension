@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.0.4
+
+### Patch Changes
+
+- Fix missing react query provider
+
 ## 3.0.3
 
 ### Patch Changes

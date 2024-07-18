@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -73,17 +73,39 @@
   },
   "typesVersions": {
     "*": {
-      ".": ["./index.d.ts"],
-      "clientOnly": ["./components/clientOnly.d.ts"],
-      "FallbackErrorBoundary": ["./components/FallbackErrorBoundary.d.ts"],
-      "withFallback": ["./components/withFallback.d.ts"],
-      "useData": ["./hooks/useData.d.ts"],
-      "usePageContext": ["./hooks/usePageContext.d.ts"],
-      "ReactQueryProvider": ["./providers/ReactQueryProvider.d.ts"],
-      "query/config": ["./query/+config.d.ts"],
-      "config": ["./+config.d.ts"],
-      "renderer/onRenderHtml": ["./renderer/onRenderHtml.d.ts"],
-      "renderer/onRenderClient": ["./renderer/onRenderClient.d.ts"]
+      ".": [
+        "./index.d.ts"
+      ],
+      "clientOnly": [
+        "./components/clientOnly.d.ts"
+      ],
+      "FallbackErrorBoundary": [
+        "./components/FallbackErrorBoundary.d.ts"
+      ],
+      "withFallback": [
+        "./components/withFallback.d.ts"
+      ],
+      "useData": [
+        "./hooks/useData.d.ts"
+      ],
+      "usePageContext": [
+        "./hooks/usePageContext.d.ts"
+      ],
+      "ReactQueryProvider": [
+        "./providers/ReactQueryProvider.d.ts"
+      ],
+      "query/config": [
+        "./query/+config.d.ts"
+      ],
+      "config": [
+        "./+config.d.ts"
+      ],
+      "renderer/onRenderHtml": [
+        "./renderer/onRenderHtml.d.ts"
+      ],
+      "renderer/onRenderClient": [
+        "./renderer/onRenderClient.d.ts"
+      ]
     }
   },
   "publishConfig": {
@@ -101,5 +123,9 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"]
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
 }
