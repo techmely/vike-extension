@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { type Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { OnRenderClientSync } from "vike/types";
 import { AppPage } from "../utils/App";
+import { getHeadSetting } from "../utils/getHead";
 
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {
@@ -18,9 +19,11 @@ const onRenderClient: OnRenderClientSync = (pageContext) => {
       // First rendering
       app = createRoot(container);
     } else {
-      // Client routing
-      const title = pageContext.data?.title || pageContext.Head?.title || "Techmely";
-      document.title = title;
+      // Client navigation
+      const title = getHeadSetting("title", pageContext);
+      const lang = getHeadSetting("lang", pageContext) || "en";
+      if (title) document.title = title;
+      document.documentElement.lang = lang;
     }
 
     app.render(page);

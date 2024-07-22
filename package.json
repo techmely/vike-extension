@@ -1,7 +1,9 @@
 {
-  "name": "@techmely/vike-react",
-  "version": "3.0.4",
-  "homepage": "https://techmely.com/libraries/vike-react",
+  "name": "techmely-vike-extensions",
+  "homepage": "https://techmely.com/libraries/vike-extensions",
+  "workspaces": [
+    "extensions/*"
+  ],
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
   },
@@ -9,32 +11,6 @@
     "url": "git+https://github.com/techmely/vike-extension.git#main"
   },
   "license": "MIT",
-  "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "lint.format": "bunx @biomejs/biome check --write .",
-    "clean": "rm -f dist node_modules",
-    "test.unit": "vitest --passWithNoTests",
-    "test.unit.run": "NODE_ENV=test vitest run --passWithNoTests --isolate",
-    "test.unit.coverage": "vitest --coverage",
-    "build": "cross-env NODE_ENV=production bun run ./build.ts",
-    "release": "bun run ./release.ts",
-    "prepare": "husky"
-  },
-  "dependencies": {
-    "@techmely/head": "^0.0.0"
-  },
-  "peerDependencies": {
-    "@tanstack/react-query": "^5.49.2",
-    "@techmely/utils": "^3.3.0",
-    "devalue": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-error-boundary": "^4.0.13",
-    "react-streaming": "^0.3.35",
-    "vike": "^0.4.177"
-  },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@changesets/changelog-github": "0.5.0",
@@ -58,60 +34,6 @@
     "vite": "^5.3.3",
     "vitest": "2.0.2",
     "zx": "8.1.4"
-  },
-  "exports": {
-    ".": "./index.js",
-    "./config": "./+config.js",
-    "./query/config": "./query/+config.js",
-    "./useData": "./hooks/useData.js",
-    "./usePageContext": "./hooks/usePageContext.js",
-    "./FallbackErrorBoundary": "./components/FallbackErrorBoundary.js",
-    "./clientOnly": "./helpers/clientOnly.js",
-    "./ReactQueryProvider": "./providers/ReactQueryProvider.js",
-    "./render/onRenderHtml": "./render/onRenderHtml.js",
-    "./render/onRenderClient": "./render/onRenderClient.js"
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./index.d.ts"
-      ],
-      "clientOnly": [
-        "./components/clientOnly.d.ts"
-      ],
-      "FallbackErrorBoundary": [
-        "./components/FallbackErrorBoundary.d.ts"
-      ],
-      "withFallback": [
-        "./components/withFallback.d.ts"
-      ],
-      "useData": [
-        "./hooks/useData.d.ts"
-      ],
-      "usePageContext": [
-        "./hooks/usePageContext.d.ts"
-      ],
-      "ReactQueryProvider": [
-        "./providers/ReactQueryProvider.d.ts"
-      ],
-      "query/config": [
-        "./query/+config.d.ts"
-      ],
-      "config": [
-        "./+config.d.ts"
-      ],
-      "renderer/onRenderHtml": [
-        "./renderer/onRenderHtml.d.ts"
-      ],
-      "renderer/onRenderClient": [
-        "./renderer/onRenderClient.d.ts"
-      ]
-    }
-  },
-  "publishConfig": {
-    "access": "public",
-    "directory": "dist",
-    "tag": "latest"
   },
   "funding": [
     {

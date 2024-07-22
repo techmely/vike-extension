@@ -3,7 +3,8 @@ import type { Config } from "vike/types";
 const config = {
   name: "@techmely/vike-react-query",
   queryClientConfig: undefined,
-  ReactQueryProvider: "import:@techmely/vike-react/ReactQueryProvider:default",
+  ReactQueryProvider:
+    "import:@techmely/vike-react/ReactQueryProvider:default",
   FallbackErrorBoundary:
     "import:@techmely/vike-react/FallbackErrorBoundary:default",
   meta: {

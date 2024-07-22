@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { renderToString } from "react-dom/server";
 import { renderToStream } from "react-streaming/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
@@ -10,7 +9,8 @@ import { getMetaHtml } from "../utils/getMetaHtml";
 addEcosystemStamp();
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
-  const { appHead, lang } = getHeadHtml(pageContext);
+  const lang = pageContext?.metadata?.locale || "en";
+  const appHead = dangerouslySkipEscape(generateAppHead(pageContext));
   const metaHtml = getMetaHtml(pageContext);
   const pageHtml = await getPageHtml(pageContext);
 
@@ -30,20 +30,12 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   };
 };
 
-function getHeadHtml(pageContext: PageContext) {
-  const appHead = dangerouslySkipEscape(
-    renderToString(<StrictMode>{generateAppHead(pageContext)}</StrictMode>),
-  );
-  const lang = pageContext?.metadata?.locale || pageContext?.locale || "en";
-  return { appHead, lang };
-}
-
 async function getPageHtml(pageContext: PageContext) {
   let pageHtml:
     | string
     | ReturnType<typeof dangerouslySkipEscape>
     | Awaited<ReturnType<typeof renderToStream>>;
-  const { stream } = pageContext.config || {};
+  const { stream } = pageContext.config.metadata || {};
 
   const page = AppPage(pageContext);
   if (!stream) {
@@ -52,7 +44,8 @@ async function getPageHtml(pageContext: PageContext) {
     const disable = (stream as boolean) === false ? true : undefined;
     pageHtml = await renderToStream(page, {
       webStream: typeof stream === "string" ? stream === "web" : undefined,
-      userAgent: pageContext.headers?.["user-agent"] || pageContext.metadata?.userAgent,
+      userAgent:
+        pageContext.headers?.["user-agent"] || pageContext.metadata?.userAgent,
       disable,
     });
   }
