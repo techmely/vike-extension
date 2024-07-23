@@ -1,4 +1,5 @@
 import type { Config, ConfigEnv } from "vike/types";
+import "./typing.d";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -42,4 +43,3 @@ const config = {
 } satisfies Config;
 
 export default config;
-export * from "./typing.d";
