@@ -50,17 +50,17 @@ declare global {
   }
 
   type VikeMetadata = {
-    userAgent: string;
-    isMobile: boolean;
+    userAgent?: string;
+    isMobile?: boolean;
     /**
      * <html lang="${locale}">
      * @default 'en'
      * **/
-    locale: string;
+    locale?: string;
     /**
      * Record<string, Record<EntityId, any>>
      */
-    initStoreState: Record<string, Record<string, any>>;
+    initStoreState?: Record<string, Record<string, any>>;
     /**
      * Whether to stream the page's HTML.
      *
@@ -75,7 +75,7 @@ declare global {
      * https://vike.dev/stream
      * boolean | 'node' | 'web'
      */
-    stream: boolean | "node" | "web";
+    stream?: boolean | "node" | "web";
     /**
      * If `true`, the page is rendered twice: on the server-side (to HTML) and on the client-side (hydration).
      *
@@ -84,12 +84,12 @@ declare global {
      * See https://vike.dev/ssr
      * @default true
      */
-    ssr: boolean;
+    ssr?: boolean;
     /**
      * Inject some `data-` into the `<html>` tag.
      * @example { appVersion: "1.0.0"} --> data-app-version="1.0.0"
      */
-    dataHeadHtml: Record<string, string | number>;
+    dataHeadHtml?: Record<string, string | number>;
     [key: string]: any;
   };
 

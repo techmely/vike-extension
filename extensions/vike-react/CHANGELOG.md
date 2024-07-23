@@ -1,10 +1,10 @@
 # @techmely/vike-react
 
-## 3.1.1
+## 3.1.2
 
 ### Patch Changes
 
-- Add cumulative in metadata config
+- Fix missing defining head metadata in config
 
 ## 3.1.0
 

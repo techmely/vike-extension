@@ -35,6 +35,7 @@ const config = {
     Wrapper: { env: serverClient, cumulative: true },
     Loading: { env: serverClient },
     metadata: { env: serverClient, cumulative: true },
+    headMetadata: { env: serverClient },
     onAfterRenderClient: { env: clientOnly },
     onBeforeRenderClient: { env: clientOnly },
   },
