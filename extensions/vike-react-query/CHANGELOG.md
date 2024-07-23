@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.1
+
+### Patch Changes
+
+- Fix export * from typing.d.ts
+
 ## 4.3.0
 
 ### Minor Changes

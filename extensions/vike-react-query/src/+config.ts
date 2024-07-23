@@ -14,4 +14,5 @@ const config = {
   },
 } as unknown as Config;
 
+export type * from "./typing.d";
 export default config;

@@ -1,3 +1,3 @@
 export * from "./components/withFallback";
 
-export * from "./typing.d";
+export type * from "./typing.d";
