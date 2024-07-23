@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "3.0.2",
+  "version": "4.3.0",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -24,7 +24,8 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.49.2",
-    "@techmely/utils": "^3.3.0",
+    "@techmely/es-toolkit": "^1.0.2",
+    "@techmely/vike-react": "^3.1.1",
     "devalue": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -59,47 +60,26 @@
   "exports": {
     ".": "./index.js",
     "./config": "./+config.js",
-    "./query/config": "./query/+config.js",
-    "./useData": "./hooks/useData.js",
-    "./usePageContext": "./hooks/usePageContext.js",
-    "./clientOnly": "./helpers/clientOnly.js",
-    "./render/onRenderHtml": "./render/onRenderHtml.js",
-    "./render/onRenderClient": "./render/onRenderClient.js"
+    "./FallbackErrorBoundary": "./components/FallbackErrorBoundary.js",
+    "./StreamedHydration": "./components/StreamedHydration.js",
+    "./ReactQueryProvider": "./providers/ReactQueryProvider.js"
   },
   "typesVersions": {
     "*": {
       ".": [
         "./index.d.ts"
       ],
-      "clientOnly": [
-        "./components/clientOnly.d.ts"
-      ],
       "FallbackErrorBoundary": [
         "./components/FallbackErrorBoundary.d.ts"
       ],
-      "withFallback": [
-        "./components/withFallback.d.ts"
-      ],
-      "useData": [
-        "./hooks/useData.d.ts"
-      ],
-      "usePageContext": [
-        "./hooks/usePageContext.d.ts"
+      "StreamedHydration": [
+        "./components/StreamedHydration.d.ts"
       ],
       "ReactQueryProvider": [
         "./providers/ReactQueryProvider.d.ts"
       ],
-      "query/config": [
-        "./query/+config.d.ts"
-      ],
       "config": [
         "./+config.d.ts"
-      ],
-      "renderer/onRenderHtml": [
-        "./renderer/onRenderHtml.d.ts"
-      ],
-      "renderer/onRenderClient": [
-        "./renderer/onRenderClient.d.ts"
       ]
     }
   },

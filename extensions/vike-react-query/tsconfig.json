@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
     "target": "ES2022",
     "lib": ["ESNext", "DOM"],
     "moduleResolution": "Bundler",
@@ -26,7 +28,12 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
     "jsx": "react-jsx",
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "paths": {
+      "@techmely/vike-react/usePageContext": [
+        "../../node_modules/@techmely/vike-react/src/hooks/usePageContext.ts"
+      ]
+    }
   },
-  "include": ["*"]
+  "include": ["src", "test"]
 }

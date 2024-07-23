@@ -1,25 +1,16 @@
 import type { Config } from "vike/types";
 
+const serverClient = { server: true, client: true };
+
 const config = {
   name: "@techmely/vike-react-query",
   queryClientConfig: undefined,
-  ReactQueryProvider:
-    "import:@techmely/vike-react/ReactQueryProvider:default",
+  Wrapper: "import:@techmely/vike-react/ReactQueryProvider:default",
   FallbackErrorBoundary:
     "import:@techmely/vike-react/FallbackErrorBoundary:default",
   meta: {
-    queryClientConfig: {
-      env: {
-        server: true,
-        client: true,
-      },
-    },
-    FallbackErrorBoundary: {
-      env: {
-        server: true,
-        client: true,
-      },
-    },
+    queryClientConfig: { env: serverClient },
+    FallbackErrorBoundary: { env: serverClient },
   },
 } as unknown as Config;
 
