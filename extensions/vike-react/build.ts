@@ -15,6 +15,6 @@ await Bun.build({
 });
 execSync("bun run tsc --emitDeclarationOnly --outDir dist");
 execSync("mv dist/src/* dist");
-execSync("mv src/typing.d.ts dist");
+execSync("cp src/typing.d.ts dist");
 execSync("rm -rf dist/tsconfig.tsbuildinfo");
 execSync("rm -rf dist/src");
