@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.1.4
+
+### Patch Changes
+
+- Fix export * from typing.d.ts
+
 ## 3.1.3
 
 ### Patch Changes
