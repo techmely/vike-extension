@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.2
+
+### Patch Changes
+
+- Fix wrong pkg name
+
 ## 4.3.1
 
 ### Patch Changes
