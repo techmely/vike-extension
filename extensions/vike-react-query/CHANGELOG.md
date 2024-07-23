@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.3
+
+### Patch Changes
+
+- Fix wrong bundle
+
 ## 4.3.2
 
 ### Patch Changes

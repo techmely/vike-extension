@@ -10,8 +10,7 @@ type Props = {
 
 const ReactQueryProvider: FC<PropsWithChildren<Props>> = ({ children }) => {
   const pageContext = usePageContext();
-  const { queryClientConfig, FallbackErrorBoundary = PassThrough } =
-    pageContext.config;
+  const { queryClientConfig, FallbackErrorBoundary } = pageContext.config;
   const [queryClient] = useState(() => new QueryClient(queryClientConfig));
 
   return (
@@ -24,7 +23,4 @@ const ReactQueryProvider: FC<PropsWithChildren<Props>> = ({ children }) => {
   );
 };
 
-function PassThrough({ children }: any) {
-  return <>{children}</>;
-}
 export default ReactQueryProvider;
