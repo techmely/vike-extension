@@ -22,11 +22,9 @@
     "release": "bun run ./release.ts",
     "prepare": "husky"
   },
-  "dependencies": {
-    "@techmely/head": "^0.0.0"
-  },
   "peerDependencies": {
-    "@techmely/utils": "^3.3.0",
+    "@techmely/head": "^0.2.0",
+    "@techmely/es-toolkit": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vike": "^0.4.177"
@@ -71,20 +69,11 @@
       "clientOnly": [
         "./components/clientOnly.d.ts"
       ],
-      "FallbackErrorBoundary": [
-        "./components/FallbackErrorBoundary.d.ts"
-      ],
-      "withFallback": [
-        "./components/withFallback.d.ts"
-      ],
       "useData": [
         "./hooks/useData.d.ts"
       ],
       "usePageContext": [
         "./hooks/usePageContext.d.ts"
-      ],
-      "ReactQueryProvider": [
-        "./providers/ReactQueryProvider.d.ts"
       ],
       "config": [
         "./+config.d.ts"

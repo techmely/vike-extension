@@ -2,15 +2,15 @@ import { renderToString } from "react-dom/server";
 import { renderToStream } from "react-streaming/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync, PageContext } from "vike/types";
-import { AppPage } from "../utils/App";
 import generateAppHead from "../utils/AppHead";
 import { getMetaHtml } from "../utils/getMetaHtml";
+import { PageElement } from "../components/PageElement";
 
 addEcosystemStamp();
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   const lang = pageContext?.metadata?.locale || "en";
-  const appHead = dangerouslySkipEscape(generateAppHead(pageContext));
+  const appHead = generateAppHead(pageContext);
   const metaHtml = getMetaHtml(pageContext);
   const pageHtml = await getPageHtml(pageContext);
 
@@ -37,7 +37,7 @@ async function getPageHtml(pageContext: PageContext) {
     | Awaited<ReturnType<typeof renderToStream>>;
   const { stream } = pageContext.config.metadata || {};
 
-  const page = AppPage(pageContext);
+  const page = PageElement(pageContext);
   if (!stream) {
     pageHtml = dangerouslySkipEscape(renderToString(page));
   } else {

@@ -1,14 +1,12 @@
-import type { ReactNode } from "react";
 import { type Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { OnRenderClientSync } from "vike/types";
-import { AppPage } from "../utils/App";
-import { getHeadSetting } from "../utils/getHead";
+import { PageElement } from "../components/PageElement";
 
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {
   pageContext.config.onBeforeRenderClient?.(pageContext);
 
-  const page = AppPage(pageContext) as ReactNode;
+  const page = PageElement(pageContext);
   const container = document.getElementById("root");
   if (!container) throw new Error("Aww - No root element - No app");
   if (container.innerHTML !== "" && pageContext.isHydration) {
@@ -20,8 +18,8 @@ const onRenderClient: OnRenderClientSync = (pageContext) => {
       app = createRoot(container);
     } else {
       // Client navigation
-      const title = getHeadSetting("title", pageContext);
-      const lang = getHeadSetting("lang", pageContext) || "en";
+      const title = pageContext.config.headMetadata?.title;
+      const lang = pageContext.config.metadata?.locale || "en";
       if (title) document.title = title;
       document.documentElement.lang = lang;
     }

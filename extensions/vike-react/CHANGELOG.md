@@ -35,7 +35,7 @@
 ### Minor Changes
 
 - Updated dependencies [[`93340fa`](https://github.com/techmely/essential-packages/commit/93340fab455bf57fd852703bdd589c88d0e5c8c0)]:
-  - @techmely/utils@3.3.0
+  - "@techmely/es-toolkit"@3.3.0
 
 ## 2.1.1
 
@@ -44,21 +44,21 @@
 - Upgrade deps
 
 - Updated dependencies []:
-  - @techmely/utils@3.2.1
+  - "@techmely/es-toolkit"@3.2.1
 
 ## 2.1.0
 
 ### Minor Changes
 
 - Updated dependencies []:
-  - @techmely/utils@3.2.0
+  - "@techmely/es-toolkit"@3.2.0
 
 ## 2.0.0
 
 ### Patch Changes
 
 - Updated dependencies []:
-  - @techmely/utils@3.1.0
+  - "@techmely/es-toolkit"@3.1.0
 
 ## 1.0.6
 
@@ -85,7 +85,7 @@
 - Fix typing + packaging
 
 - Updated dependencies []:
-  - @techmely/utils@3.0.3
+  - "@techmely/es-toolkit"@3.0.3
 
 ## 1.0.2
 
@@ -100,7 +100,7 @@
 - [`4fb8e01`](https://github.com/techmely/essential-packages/commit/4fb8e018133c2abaf622762e1b53667191b624d8) Thanks [@harrytran998](https://github.com/harrytran998)! - Fix replace build packages
 
 - Updated dependencies [[`4fb8e01`](https://github.com/techmely/essential-packages/commit/4fb8e018133c2abaf622762e1b53667191b624d8)]:
-  - @techmely/utils@3.0.2
+  - "@techmely/es-toolkit"@3.0.2
 
 ## 1.0.0
 
@@ -109,7 +109,7 @@
 - Update the workflow we use to build this project
 
 - Updated dependencies [[`0cc5742`](https://github.com/techmely/essential-packages/commit/0cc5742b2da509662f7a9f51ad6f0757864cedd1), [`04df2e6`](https://github.com/techmely/essential-packages/commit/04df2e6dedb74bb11283f03216d475e044bf55ea)]:
-  - @techmely/utils@3.0.0
+  - "@techmely/es-toolkit"@3.0.0
 
 ## 0.1.20
 
@@ -118,7 +118,7 @@
 - Upgrade deps
 
 - Updated dependencies []:
-  - @techmely/utils@2.1.17
+  - "@techmely/es-toolkit"@2.1.17
 
 ## 0.1.19
 
@@ -127,7 +127,7 @@
 - Upgrade deps
 
 - Updated dependencies []:
-  - @techmely/utils@2.1.14
+  - "@techmely/es-toolkit"@2.1.14
 
 ## 0.1.18
 
@@ -136,7 +136,7 @@
 - Bump version & upgrade deps
 
 - Updated dependencies []:
-  - @techmely/utils@2.1.10
+  - "@techmely/es-toolkit"@2.1.10
 
 ## 0.1.17
 
@@ -145,7 +145,7 @@
 - upgrade deps
 
 - Updated dependencies []:
-  - @techmely/utils@2.1.9
+  - "@techmely/es-toolkit"@2.1.9
 
 ## 0.1.16
 
