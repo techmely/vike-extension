@@ -3,7 +3,6 @@
 import { $, cd, echo } from "zx";
 
 $`cp package.json dist`;
-$`cp README.md dist`;
 $`cp CHANGELOG.md dist`;
 cd("dist");
 echo("Start publishing...");

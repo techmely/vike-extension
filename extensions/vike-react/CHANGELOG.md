@@ -1,5 +1,17 @@
 # @techmely/vike-react
 
+## 3.1.1
+
+### Patch Changes
+
+- Add cumulative in metadata config
+
+## 3.1.0
+
+### Minor Changes
+
+- Seperate vike react with query to another packages
+
 ## 3.0.4
 
 ### Patch Changes
