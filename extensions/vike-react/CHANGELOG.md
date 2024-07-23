@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.1.5
+
+### Patch Changes
+
+- Fix missing export files
+
 ## 3.1.4
 
 ### Patch Changes
