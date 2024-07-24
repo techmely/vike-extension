@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "4.3.4",
+  "version": "4.3.5",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -59,11 +59,26 @@
     "zx": "8.1.4"
   },
   "exports": {
-    ".": "./index.js",
-    "./config": "./+config.js",
-    "./FallbackErrorBoundary": "./components/FallbackErrorBoundary.js",
-    "./StreamedHydration": "./components/StreamedHydration.js",
-    "./ReactQueryProvider": "./providers/ReactQueryProvider.js"
+    ".": {
+      "default": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./config": {
+      "default": "./+config.js",
+      "require": "./+config.cjs"
+    },
+    "./FallbackErrorBoundary": {
+      "default": "./components/FallbackErrorBoundary.js",
+      "require": "./components/FallbackErrorBoundary.cjs"
+    },
+    "./StreamedHydration": {
+      "default": "./components/StreamedHydration.js",
+      "require": "./components/StreamedHydration.cjs"
+    },
+    "./ReactQueryProvider": {
+      "default": "./providers/ReactQueryProvider.js",
+      "require": "./providers/ReactQueryProvider.cjs"
+    }
   },
   "typesVersions": {
     "*": {

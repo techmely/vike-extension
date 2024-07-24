@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.5
+
+### Patch Changes
+
+- Update the export fields in package.json 
+
 ## 4.3.4
 
 ### Patch Changes
