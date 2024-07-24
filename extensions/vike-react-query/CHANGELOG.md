@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.4
+
+### Patch Changes
+
+- Add tsup config to resolve esm issues
+
 ## 4.3.3
 
 ### Patch Changes
