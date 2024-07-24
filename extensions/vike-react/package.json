@@ -19,6 +19,7 @@
     "test.unit.run": "NODE_ENV=test vitest run --passWithNoTests --isolate",
     "test.unit.coverage": "vitest --coverage",
     "build": "cross-env NODE_ENV=production bun run ./build.ts",
+    "build.tsup": "cross-env NODE_ENV=production tsup",
     "release": "bun run ./release.ts",
     "prepare": "husky"
   },
@@ -53,13 +54,34 @@
     "zx": "8.1.4"
   },
   "exports": {
-    ".": "./index.js",
-    "./config": "./+config.js",
-    "./useData": "./hooks/useData.js",
-    "./usePageContext": "./hooks/usePageContext.js",
-    "./clientOnly": "./helpers/clientOnly.js",
-    "./onRenderHtml": "./render/onRenderHtml.js",
-    "./onRenderClient": "./render/onRenderClient.js"
+    ".": {
+      "default": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./config": {
+      "default": "./+config.js",
+      "require": "./+config.cjs"
+    },
+    "./useData": {
+      "default": "./hooks/useData.js",
+      "require": "./hooks/useData.cjs"
+    },
+    "./usePageContext": {
+      "default": "./hooks/usePageContext.js",
+      "require": "./hooks/usePageContext.cjs"
+    },
+    "./clientOnly": {
+      "default": "./helpers/clientOnly.js",
+      "require": "./helpers/clientOnly.cjs"
+    },
+    "./onRenderHtml": {
+      "default": "./render/onRenderHtml.js",
+      "require": "./render/onRenderHtml.cjs"
+    },
+    "./onRenderClient": {
+      "default": "./render/onRenderClient.js",
+      "require": "./render/onRenderClient.cjs"
+    }
   },
   "typesVersions": {
     "*": {
