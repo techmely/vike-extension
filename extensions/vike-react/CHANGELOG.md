@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.1.6
+
+### Patch Changes
+
+- Fix esm issues
+
 ## 3.1.5
 
 ### Patch Changes
