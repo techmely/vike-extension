@@ -1,10 +1,16 @@
 # @techmely/vike-react-query
 
+## 4.3.6
+
+### Patch Changes
+
+- Fix diff react stream version
+
 ## 4.3.5
 
 ### Patch Changes
 
-- Update the export fields in package.json 
+- Update the export fields in package.json
 
 ## 4.3.4
 
