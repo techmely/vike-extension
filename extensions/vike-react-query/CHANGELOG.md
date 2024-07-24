@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.4
+
+### Patch Changes
+
+- Fix diff react stream version
+
 ## 4.3.3
 
 ### Patch Changes
