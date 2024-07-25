@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "3.1.6",
+  "version": "3.1.7",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -85,13 +85,27 @@
   },
   "typesVersions": {
     "*": {
-      ".": ["./index.d.ts"],
-      "clientOnly": ["./components/clientOnly.d.ts"],
-      "useData": ["./hooks/useData.d.ts"],
-      "usePageContext": ["./hooks/usePageContext.d.ts"],
-      "config": ["./+config.d.ts"],
-      "onRenderHtml": ["./renderer/onRenderHtml.d.ts"],
-      "onRenderClient": ["./renderer/onRenderClient.d.ts"]
+      ".": [
+        "./index.d.ts"
+      ],
+      "clientOnly": [
+        "./components/clientOnly.d.ts"
+      ],
+      "useData": [
+        "./hooks/useData.d.ts"
+      ],
+      "usePageContext": [
+        "./hooks/usePageContext.d.ts"
+      ],
+      "config": [
+        "./+config.d.ts"
+      ],
+      "onRenderHtml": [
+        "./renderer/onRenderHtml.d.ts"
+      ],
+      "onRenderClient": [
+        "./renderer/onRenderClient.d.ts"
+      ]
     }
   },
   "publishConfig": {
@@ -109,5 +123,9 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"]
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
 }

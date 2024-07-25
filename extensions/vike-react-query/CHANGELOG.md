@@ -1,5 +1,14 @@
 # @techmely/vike-react-query
 
+## 4.3.8
+
+### Patch Changes
+
+- Test change version
+
+- Updated dependencies []:
+  - @techmely/vike-react@3.1.7
+
 ## 4.3.7
 
 ### Patch Changes
@@ -40,7 +49,7 @@
 
 ### Patch Changes
 
-- Fix export * from typing.d.ts
+- Fix export \* from typing.d.ts
 
 ## 4.3.0
 
