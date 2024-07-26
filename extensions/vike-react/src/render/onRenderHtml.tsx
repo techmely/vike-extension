@@ -11,7 +11,7 @@ addEcosystemStamp();
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   const lang = getPrimitiveOrContextValue("lang", pageContext) || "en";
-  const appHead = generateAppHead(pageContext);
+  const appHead = dangerouslySkipEscape(generateAppHead(pageContext));
   const metaHtml = getMetaHtml(pageContext);
   const pageHtml = await getPageHtml(pageContext);
 

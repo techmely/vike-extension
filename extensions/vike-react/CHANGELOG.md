@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.1.10
+
+### Patch Changes
+
+- Fix missing dangerouslySkipEscape on generate app head
+
 ## 3.1.9
 
 ### Patch Changes

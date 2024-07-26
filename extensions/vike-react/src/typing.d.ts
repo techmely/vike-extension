@@ -15,6 +15,22 @@ declare global {
     layout?: () => ReactNode;
   };
 
+  type VikeMetadata = HeadMetadata & {
+    userAgent?: string;
+    isMobile?: boolean;
+    /**
+     * <html lang="${lang}">
+     * @default 'en'
+     * **/
+    lang?: PrimitiveOrFnContext<string>;
+    /**
+     * Inject some `data-` into the `<html>` tag.
+     * @example { appVersion: "1.0.0"} --> data-app-version="1.0.0"
+     */
+    dataHeadHtml?: Record<string, string | number>;
+    [key: string]: any;
+  };
+
   namespace VikePackages {
     interface ConfigVikeReact {
       Layout?: FnWithChildren;
@@ -75,22 +91,6 @@ declare global {
       metadata?: VikeMetadata;
     }
   }
-
-  type VikeMetadata = HeadMetadata & {
-    userAgent?: string;
-    isMobile?: boolean;
-    /**
-     * <html lang="${lang}">
-     * @default 'en'
-     * **/
-    lang?: PrimitiveOrFnContext<string>;
-    /**
-     * Inject some `data-` into the `<html>` tag.
-     * @example { appVersion: "1.0.0"} --> data-app-version="1.0.0"
-     */
-    dataHeadHtml?: Record<string, string | number>;
-    [key: string]: any;
-  };
 
   interface Window {
     __vike?: Record<string, Record<string, unknown>>;
