@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "3.1.8",
+  "version": "3.1.9",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -28,6 +28,7 @@
     "@techmely/es-toolkit": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-streaming": "^0.3.42",
     "vike": "^0.4.177"
   },
   "devDependencies": {

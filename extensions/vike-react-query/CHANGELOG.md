@@ -1,5 +1,14 @@
 # @techmely/vike-react-query
 
+## 4.3.11
+
+### Patch Changes
+
+- Fix missing external build in tsup config
+
+- Updated dependencies []:
+  - @techmely/vike-react@3.1.9
+
 ## 4.3.10
 
 ### Patch Changes

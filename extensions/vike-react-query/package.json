@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "4.3.10",
+  "version": "4.3.11",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/vike-extension/issues"
@@ -26,7 +26,7 @@
   "peerDependencies": {
     "@tanstack/react-query": "^5.49.2",
     "@techmely/es-toolkit": "^1.0.2",
-    "@techmely/vike-react": "^3.1.8",
+    "@techmely/vike-react": "^3.1.9",
     "devalue": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -49,9 +49,6 @@
     "happy-dom": "14.12.3",
     "husky": "9.0.11",
     "npm-check-updates": "16.14.20",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-streaming": "^0.3.42",
     "typescript": "5.5.3",
     "vike": "^0.4.177",
     "vite": "^5.3.3",

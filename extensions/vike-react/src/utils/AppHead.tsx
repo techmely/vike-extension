@@ -3,13 +3,12 @@ import { composeHead, composeHeadMetadata } from "@techmely/head";
 import { unique } from "@techmely/es-toolkit";
 
 function generateAppHead(pageContext: PageContext): string {
-  const configHeads = pageContext?.config?.heads || [];
-  const headMetadata = pageContext?.config?.metadata?.head || {};
-  const _headMetadata = composeHeadMetadata(headMetadata);
-  const _configHeads = composeHead(configHeads);
+  const { heads = [], metadata = {} } = pageContext?.config || [];
+  const headMetadata = composeHeadMetadata(metadata);
+  const _configHeads = composeHead(heads);
 
-  const heads = unique([..._headMetadata, ..._configHeads]);
-  return heads.join("\n");
+  const _heads = unique([...headMetadata, ..._configHeads]);
+  return _heads.join("\n");
 }
 
 export default generateAppHead;
