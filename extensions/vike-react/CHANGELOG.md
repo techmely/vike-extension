@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 3.1.8
+
+### Patch Changes
+
+- Update vike react extensions to new ver
+
 ## 3.1.7
 
 ### Patch Changes

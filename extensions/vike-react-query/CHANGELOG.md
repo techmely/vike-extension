@@ -1,5 +1,14 @@
 # @techmely/vike-react-query
 
+## 4.3.9
+
+### Patch Changes
+
+- Update vike react extensions to new ver
+
+- Updated dependencies []:
+  - @techmely/vike-react@3.1.8
+
 ## 4.3.8
 
 ### Patch Changes
