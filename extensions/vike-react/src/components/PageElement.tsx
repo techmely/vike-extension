@@ -3,9 +3,14 @@ import type { PageContext } from "vike/types";
 import { PageContextProvider } from "../providers/PageContextProvider";
 
 export function PageElement(pageContext: PageContext): JSX.Element {
-  const { Page, Loading } = pageContext;
+  const {
+    Page,
+    config: { Loading },
+  } = pageContext;
   let page = Page ? <Page /> : null;
-  page = wrapSuspense(page, Loading?.layout, page);
+  // @ts-expect-error Ignore type errors
+  const loadingLayout: VikeLoading["layout"] = Loading?.layout;
+  page = wrapSuspense(page, loadingLayout, page);
   /**
    * Only layout & wrapper components are cumulative
    */
@@ -19,7 +24,7 @@ export function PageElement(pageContext: PageContext): JSX.Element {
   for (const Wrap of wrapperComps) {
     // @ts-expect-error Ignore type errors
     page = <Wrap>{page}</Wrap>;
-    page = wrapSuspense(page, Loading?.layout, page);
+    page = wrapSuspense(page, loadingLayout, page);
   }
 
   return (

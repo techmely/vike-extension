@@ -5,11 +5,12 @@ import type { OnRenderHtmlAsync, PageContext } from "vike/types";
 import generateAppHead from "../utils/AppHead";
 import { getMetaHtml } from "../utils/getMetaHtml";
 import { PageElement } from "../components/PageElement";
+import { getPrimitiveOrContextValue } from "../utils/getPrimtiveOrContextValue";
 
 addEcosystemStamp();
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
-  const lang = pageContext?.metadata?.locale || "en";
+  const lang = getPrimitiveOrContextValue("lang", pageContext) || "en";
   const appHead = generateAppHead(pageContext);
   const metaHtml = getMetaHtml(pageContext);
   const pageHtml = await getPageHtml(pageContext);
@@ -35,7 +36,7 @@ async function getPageHtml(pageContext: PageContext) {
     | string
     | ReturnType<typeof dangerouslySkipEscape>
     | Awaited<ReturnType<typeof renderToStream>>;
-  const { stream } = pageContext.config.metadata || {};
+  const { stream } = pageContext.config || {};
 
   const page = PageElement(pageContext);
   if (!stream) {

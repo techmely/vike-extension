@@ -1,4 +1,4 @@
-import type { Config, ConfigEnv } from "vike/types";
+import type { Config, ConfigEffect, ConfigEnv } from "vike/types";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -34,8 +34,10 @@ const config = {
     Layout: { env: serverClient, cumulative: true },
     Wrapper: { env: serverClient, cumulative: true },
     Loading: { env: serverClient },
+    lang: { env: serverClient },
+    ssr: { env: { config: true }, effect: ssrEffect },
+    stream: { env: { server: true } },
     metadata: { env: serverClient, cumulative: true },
-    headMetadata: { env: serverClient },
     onAfterRenderClient: { env: clientOnly },
     onBeforeRenderClient: { env: clientOnly },
   },
@@ -43,3 +45,26 @@ const config = {
 
 export type * from "./typing.d";
 export default config;
+
+function ssrEffect({
+  configDefinedAt,
+  configValue,
+}: Parameters<ConfigEffect>[0]): ReturnType<ConfigEffect> {
+  if (typeof configValue !== "boolean")
+    throw new Error(`${configDefinedAt} should be a boolean`);
+  const env = {
+    // Always load on the client-side.
+    client: true,
+    // When the SSR flag is false, we want to render the page only on the client-side.
+    // We achieve this by loading `Page` only on the client-side: when onRenderHtml()
+    // gets a `Page` value that is undefined it skip server-side rendering.
+    server: configValue !== false,
+  };
+  return {
+    meta: {
+      Page: { env },
+      Layout: { env },
+      Loading: { env },
+    },
+  };
+}

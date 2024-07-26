@@ -11,6 +11,10 @@
     "url": "git+https://github.com/techmely/vike-extension.git#main"
   },
   "license": "MIT",
+  "scripts": {
+    "build": "conc \"cd extensions/vike-react && bun run build\" \"cd extensions/vike-react-query && bun run build\"",
+    "release": "conc \"cd extensions/vike-react && bun run release\" \"cd extensions/vike-react-query && bun run release\""
+  },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@changesets/changelog-github": "0.5.0",
@@ -22,6 +26,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitest/coverage-v8": "1.6.0",
+    "concurrently": "8.2.2",
     "cross-env": "7.0.3",
     "happy-dom": "14.12.3",
     "husky": "9.0.11",

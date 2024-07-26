@@ -1,6 +1,7 @@
 import { type Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { OnRenderClientSync } from "vike/types";
 import { PageElement } from "../components/PageElement";
+import { getPrimitiveOrContextValue } from "../utils/getPrimtiveOrContextValue";
 
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {
@@ -18,8 +19,8 @@ const onRenderClient: OnRenderClientSync = (pageContext) => {
       app = createRoot(container);
     } else {
       // Client navigation
-      const title = pageContext.config.headMetadata?.title;
-      const lang = pageContext.config.metadata?.locale || "en";
+      const title = getPrimitiveOrContextValue("title", pageContext);
+      const lang = getPrimitiveOrContextValue("lang", pageContext) || "en";
       if (title) document.title = title;
       document.documentElement.lang = lang;
     }
