@@ -7,7 +7,7 @@ const config = {
   queryClientConfig: undefined,
   Wrapper: "import:@techmely/vike-react-query/ReactQueryProvider:default",
   FallbackErrorBoundary:
-    "import:@techmely/vike-react-query-query/FallbackErrorBoundary:default",
+    "import:@techmely/vike-react-query/FallbackErrorBoundary:default",
   meta: {
     queryClientConfig: { env: serverClient },
     FallbackErrorBoundary: { env: serverClient },

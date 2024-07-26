@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 4.3.10
+
+### Patch Changes
+
+- Fix: remove the excess from fallback error boundry config
+
 ## 4.3.9
 
 ### Patch Changes
