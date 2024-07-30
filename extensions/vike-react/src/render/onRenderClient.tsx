@@ -1,7 +1,7 @@
 import { type Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { OnRenderClientSync } from "vike/types";
 import { PageElement } from "../components/PageElement";
-import { getPrimitiveOrContextValue } from "../utils/getPrimtiveOrContextValue";
+import { getPrimitiveOrContextValue } from "../utils/getPrimitiveOrContextValue";
 
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {

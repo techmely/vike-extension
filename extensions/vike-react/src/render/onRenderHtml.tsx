@@ -2,10 +2,10 @@ import { renderToString } from "react-dom/server";
 import { renderToStream } from "react-streaming/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync, PageContext } from "vike/types";
+import { PageElement } from "../components/PageElement";
 import generateAppHead from "../utils/AppHead";
 import { getMetaHtml } from "../utils/getMetaHtml";
-import { PageElement } from "../components/PageElement";
-import { getPrimitiveOrContextValue } from "../utils/getPrimtiveOrContextValue";
+import { getPrimitiveOrContextValue } from "../utils/getPrimitiveOrContextValue";
 
 addEcosystemStamp();
 
@@ -45,8 +45,7 @@ async function getPageHtml(pageContext: PageContext) {
     const disable = (stream as boolean) === false ? true : undefined;
     pageHtml = await renderToStream(page, {
       webStream: typeof stream === "string" ? stream === "web" : undefined,
-      userAgent:
-        pageContext.headers?.["user-agent"] || pageContext.metadata?.userAgent,
+      userAgent: pageContext.headers?.["user-agent"] || pageContext.metadata?.userAgent,
       disable,
     });
   }
